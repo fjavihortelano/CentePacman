@@ -900,7 +900,7 @@ var PACMAN = (function () {
             setState(PAUSE);
             audio.pause();
             map.draw(ctx);
-            dialog("Paused");
+            dialog("Pausa");
         } else if (state !== PAUSE) {   
             return user.keyDown(e);
         }
@@ -1021,7 +1021,7 @@ var PACMAN = (function () {
         } else if (state === WAITING && stateChanged) {            
             stateChanged = false;
             map.draw(ctx);
-            dialog("Press N to start a New game");            
+            dialog("Pulsa N para comenzar un juego nuevo");            
         } else if (state === EATEN_PAUSE && 
                    (tick - timerStart) > (Pacman.FPS / 3)) {
             map.draw(ctx);
@@ -1135,7 +1135,7 @@ var PACMAN = (function () {
         
     function loaded() {
 
-        dialog("Press N to Start");
+        dialog("Pulsa N para continuar");
         
         document.addEventListener("keydown", keyDown, true);
         document.addEventListener("keypress", keyPress, true); 
